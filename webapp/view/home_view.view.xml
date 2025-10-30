@@ -1,0 +1,44 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="app01.controller.home_view"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    >
+    <Page id="page1" title="{i18n>title}">
+    <!-- header section -->
+    <tnt:ToolHeader id="_IDGenToolbarHeader">
+        <Button id="_IDGenButton1" type="Transparent" icon="sap-icon://menu2"/>
+        <ToolbarSpacer id="_IDGenToolbarSpacer1" ></ToolbarSpacer>
+        <Text id="_IDGenText1" text="User Login"></Text>
+        <ToolbarSpacer id="_IDGenToolbarSpacer2" ></ToolbarSpacer>
+        <Button id="_IDGenButton2" type="Accept" text="Admin login"/>
+    </tnt:ToolHeader>
+
+    <!-- body section -->
+    <content>
+        <VBox id="_IDGenVBox" class="login-form"  >
+            <form:SimpleForm  id="_IDGenSimpleForm1" title="User Login" editable="false" layout="ResponsiveGridLayout"
+            xmlns:form="sap.ui.layout.form"
+            >
+                <Label id="_IDGenLabel1" text="Username"></Label>
+                <Input id="Input1" type="Text" placeholder="Enter your username"></Input>
+                <Label id="_IDGenLabel2" text="Password"></Label>
+                <Input id="Input2" type="Password" placeholder="Enter password"></Input>
+                <Button id="_IDGenButton" press="onLogin" type="Emphasized" text="Login"></Button>
+                <Button id="_IDGenButton4" type="Default" text="Sign Up" press="onSignUp"> </Button>
+            </form:SimpleForm>
+        </VBox>
+    </content>
+
+    <!-- footer section -->
+    <footer>
+    <Bar id="_IDGenBar" >
+        <contentLeft>
+            <Text id="_IDGenText3" text="@copyrightRitik"></Text>
+        </contentLeft>
+        <contentRight>
+            <Text id="_IDGenText4" text="LTIMindtree"></Text>
+        </contentRight>
+    </Bar>
+    </footer>
+    </Page>
+</mvc:View>

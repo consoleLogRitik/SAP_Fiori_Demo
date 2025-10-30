@@ -1,0 +1,20 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="app01.controller.dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    >
+    <Page id="page2" title="{i18n>title}">
+        <tnt:ToolHeader id="_IDGenToolHeader">
+            <Text id="_IDGenText11"  text="Dashboard"></Text>
+            <ToolbarSpacer id="_IDGenToolbarSpacer3"  ></ToolbarSpacer>
+            <Text id="_IDGenText22"  text="Hii {oUserModel>/username}!, Your pass is '{oUserModel>/password}'"></Text>
+            <ToolbarSpacer id="_IDGenToolbarSpacer4"  ></ToolbarSpacer>
+            <Button id="_IDGenButton3" press="onLogout" type="Reject" text="Logout"/>
+        </tnt:ToolHeader>
+        
+        <Text id="text1" text="Welcome to the dashboard !!!"></Text>
+        <List id="_IDGenList" items="{/products}" >
+            <StandardListItem id="_IDGenStandardListItem1" type="Active" title="ProductName"></StandardListItem>
+        </List>
+    </Page>
+</mvc:View>

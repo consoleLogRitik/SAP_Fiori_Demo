@@ -1,0 +1,7 @@
+/* Enter your custom styles here */
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}

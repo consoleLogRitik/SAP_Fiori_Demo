@@ -1,0 +1,46 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="app01.controller.signup"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    >
+    <Page id="page22" title="{i18n>title}">
+     <tnt:ToolHeader id="_IDGenToolbarHeader34">
+        <Button id="_IDGenButton123" type="Transparent" icon="sap-icon://menu2"/>
+        <ToolbarSpacer id="_IDGenToolbarSpacer13" ></ToolbarSpacer>
+        <Text id="_IDGenText441" text="User Signup"></Text>
+        <ToolbarSpacer id="_IDGenToolbarSpacer244" ></ToolbarSpacer>
+    </tnt:ToolHeader>
+
+    <!-- body section -->
+    <content>
+        <VBox id="_IDGenVBox4" class="login-form"  >
+            <form:SimpleForm  id="_IDGenSimpleForm51" title="User Signup" editable="false" layout="ResponsiveGridLayout"
+            xmlns:form="sap.ui.layout.form"
+            >
+                <Label id="_IDGenLabel51" text="Username"></Label>
+                <Input id="Input41" value="{newUserModel>/username}" type="Text" placeholder="Create a username" required="true"></Input>
+                <Label id="_IDGenLabel41" text="Name"></Label>
+                <Input id="Input415" type="Text" value="{newUserModel>/name}" placeholder="Create a name" required="true"></Input>
+                <Label id="_IDGenLabel24" text="Password" ></Label>
+                <Input id="Input21" type="Password" value="{newUserModel>/password}" placeholder="Create password" required="true"></Input>
+                <Label id="_IDGenLabel241" text="Confirm Password"></Label>
+                <Input id="Input212" type="Password" value="{newUserModel>/confirmPassword}" placeholder="Re-enter new password" required="true"></Input>
+                <Button id="_IDGenButton22" press="onRegister" type="Emphasized" text="Register"></Button>
+                <Button id="_IDGenButton5" press="goBackToLogin" icon="sap-icon://nav-back" text="Go Back To Login"></Button>
+            </form:SimpleForm>
+        </VBox>
+    </content>
+
+    <!-- footer section -->
+    <footer>
+    <Bar id="_IDGenBar1" >
+        <contentLeft>
+            <Text id="_IDGenText31" text="@copyrightRitik"></Text>
+        </contentLeft>
+        <contentRight>
+            <Text id="_IDGenText41" text="LTIMindtree"></Text>
+        </contentRight>
+    </Bar>
+    </footer>
+    </Page>
+</mvc:View>
