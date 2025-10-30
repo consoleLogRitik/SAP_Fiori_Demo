@@ -7,7 +7,7 @@
         <tnt:ToolHeader id="_IDGenToolHeader">
             <Text id="_IDGenText11"  text="Dashboard"></Text>
             <ToolbarSpacer id="_IDGenToolbarSpacer3"  ></ToolbarSpacer>
-            <Text id="_IDGenText22"  text="Hii {oUserModel>/username}!, Your pass is '{oUserModel>/password}'"></Text>
+            <Text id="_IDGenText22"  text="Hii {oUserModel>/username}!"></Text>
             <ToolbarSpacer id="_IDGenToolbarSpacer4"  ></ToolbarSpacer>
             <Button id="_IDGenButton3" press="onLogout" type="Reject" text="Logout"/>
         </tnt:ToolHeader>

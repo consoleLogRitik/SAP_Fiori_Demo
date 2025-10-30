@@ -10,8 +10,10 @@ sap.ui.define([
             //intialize a model to store values...
             var oUserModel = new sap.ui.model.json.JSONModel();
             this.getView().setModel(oUserModel,"oUserModel");
+
         },
         _onObjectMatched(oEvent){
+            // comment Ritik
             let name = oEvent.getParameter("arguments").name;
             let pass = oEvent.getParameter("arguments").pass;
             let maskedPass = '*'.repeat(pass.length - 2) + pass.slice(-2);
