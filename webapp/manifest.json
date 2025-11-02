@@ -65,6 +65,10 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
+      },
+      "products": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "mockdata/products.json"
       }
     },
     "resources": {

@@ -1,20 +1,56 @@
-<mvc:View xmlns:form="sap.ui.layout.form" controllerName="app01.controller.dashboard"
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    controllerName="app01.controller.dashboard"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
     xmlns="sap.m"
-    xmlns:tnt="sap.tnt"
-    >
-    <Page id="page2" title="{i18n>title}">
-        <tnt:ToolHeader id="_IDGenToolHeader">
-            <Text id="_IDGenText11"  text="Dashboard"></Text>
-            <ToolbarSpacer id="_IDGenToolbarSpacer3"  ></ToolbarSpacer>
-            <Text id="_IDGenText22"  text="Hii {oUserModel>/username}!"></Text>
-            <ToolbarSpacer id="_IDGenToolbarSpacer4"  ></ToolbarSpacer>
-            <Button id="_IDGenButton3" press="onLogout" type="Reject" text="Logout"/>
-        </tnt:ToolHeader>
-        
-        <Text id="text1" text="Welcome to the dashboard !!!"></Text>
-        <List id="_IDGenList" items="{/products}" >
-            <StandardListItem id="_IDGenStandardListItem1" type="Active" title="ProductName"></StandardListItem>
+>
+    <Page id="_IDGenPage">
+        <List
+            id="_IDGenList"
+            headerText="Test title"
+            class="sapUiResponsiveMargin"
+            width="auto"
+            items="{
+                path:'products>/ProductCollection',
+                sorter: {
+                    path: 'Category',
+                    group: true
+                }
+
+            }"
+        >
+            <headerToolbar>
+                <Toolbar id="_IDGenToolbar" >
+                    <Title id="_IDGenTitle" text="Assets"/>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+                    <SearchField id="_IDGenSearchField" 
+                        width="30%"
+                        search=".onFilterInvoices"></SearchField>
+                </Toolbar>
+            </headerToolbar>
+            <items>
+                <ObjectListItem
+                    id="_IDGenObjectListItem1"
+                    core:require="{
+                        Currency: 'sap/ui/model/type/Currency'
+                    }"
+                    title="{products>Name} x {products>Quantity}"
+                    icon="{products>ProductPicUrl}"
+                    number="{
+                        parts: [
+                            'products>Price',
+                            'curr>/currency'
+                        ],
+                        type: 'Currency',
+                        formatOptions: {
+                                showMeasure: false
+                        }
+                    }"
+                    numberUnit="{curr>/currency}"
+                    numberState="{= ${products>Price} > 100 ? 'Error' : 'Success'}"
+                />
+            </items>
         </List>
     </Page>
 </mvc:View>
